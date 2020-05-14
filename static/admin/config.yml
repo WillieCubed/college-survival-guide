@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: "editorial_workflow"
+media_folder: "static/media/uploads"
+public_folder: "/media/uploads"
+
+collections:
+  - name: "entries"
+    label: "Entries"
+    folder: "entries"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Last Updated", name: "updated", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "resources"
+    laebl: "Resources"
+    folder: "resources"
+    create: true,
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Link", name: "link", widget: "string"}
