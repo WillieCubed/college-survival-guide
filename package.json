@@ -1,5 +1,5 @@
 {
-  "name": "college-surival-guide",
+  "name": "college-survival-guide",
   "private": true,
   "scripts": {
     "build": "gridsome build",
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
-    "gridsome-plugin-netlify-cms": "^1.0.9"
+    "gridsome-plugin-netlify-cms": "^1.0.9",
+    "gridsome-plugin-tailwindcss": "^2.2.48"
   }
 }
