@@ -1,33 +1,30 @@
 <template>
   <Layout>
-
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
+    <header class="hero flex">
+      <div class="my-auto">
+        <div class="text-4xl">College Survival Guide</div>
+        <div class="text-2xl">All the important things.</div>
+      </div>
+    </header>
+    <section id="search">
+      <div class="w-full">
+        <!-- Search box -->
+        <input class="w-full my-4 p-2 bg-white rounded-md p-4 shadow-lg" type="text" name="search" id="searchInput" placeholder="Search" v-on>
+      </div>
+    </section>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
-  }
-}
+    title: 'Home',
+  },
+};
 </script>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
+<style lang="postcss">
+.hero {
+  height: 256px;
 }
 </style>
