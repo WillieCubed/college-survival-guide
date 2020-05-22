@@ -18,9 +18,9 @@ collections:
       - {label: "Last Updated", name: "updated", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "resources"
-    laebl: "Resources"
+    label: "Resources"
     folder: "resources"
-    create: true,
+    create: true
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
