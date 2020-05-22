@@ -1,14 +1,16 @@
-# Default starter for Gridsome
+# College Survival Guide
+*A repository of things I wish I knew back in freshman year.*
+[![Netlify Status](https://api.netlify.com/api/v1/badges/26153b88-659f-4037-80a7-3834a02d578b/deploy-status)](https://app.netlify.com/sites/collegesurvivalguide/deploys)
 
-This is the project you get when you run `gridsome create new-project`.
+To see the WIP, go to the Netlify [site](https://collegesurvivalguide.netlify.app/).
 
-### 1. Install Gridsome CLI tool if you don't have
+## Development
+To start the local development server, run `npm run develop`.
 
-`npm install --global @gridsome/cli`
+### Deployment
+To produce a build for deployment, run `npm run build`. This will create a
+`dist/` directory that can be deployed to any static hosting provider.
 
-### 2. Create a Gridsome project
+This project uses Netlify for hosting and Netlify CMS to manage website content.
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+To visit the CMS dashboard, go to `/admin.`
