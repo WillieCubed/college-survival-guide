@@ -1,7 +1,10 @@
 ---
 title: Introduction
 subtitle: Or why this is a thing
+description: An overview of the UTD Survival Guide containing details about the
+  purpose and format of this online notebook.
 updated: 2020-05-22T19:37:07.326Z
+chapter: Admissions Overview
 ---
 # Motivation
 Part of me got tired seeing the same questions answered time and time again on r/utdallas. They're well-meaning, but when someone asks a question that can be easily answered with Google, it bugs me.
