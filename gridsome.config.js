@@ -21,13 +21,22 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'entries/**/*.md',
+        path: 'content/entries/**/*.md',
         typeName: 'Entry',
+        route: '/guide/:chapter/:title',
         remark: {
           plugins: [
             // ...local plugins
           ],
         },
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/chapters/**/*.md',
+        typeName: 'Chapter',
+        route: '/guide/:title',
       },
     },
     {
