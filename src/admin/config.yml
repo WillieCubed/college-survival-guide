@@ -1,0 +1,109 @@
+backend:
+  name: git-gateway
+  branch: master
+
+# publish_mode: "editorial_workflow"
+media_folder: "static/media/uploads"
+public_folder: "/media/uploads"
+
+collections:
+  - name: "entries"
+    label: "Entry"
+    folder: "content/entries"
+    create: true
+    slug: "{{title}}"
+    required: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+        required: false
+        # TODO: Add default
+      - {label: "Last Updated", name: "updated", widget: "datetime"}
+      - label: "Chapter"
+        name: "chapter"
+        widget: "relation"
+        collection: "chapters"
+        valueField: title
+        searchFields:
+          - title
+        displayFields:
+          - title
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "chapters"
+    label: "Chapter"
+    folder: "content/chapters"
+    slug: "{{title}}"
+    create: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Description"
+        name: "description"
+        widget: "text"
+      - label: Image
+        name: featuredImage
+        widget: image
+      - label: Position
+        name: guideOrder
+        widget: number
+        valueType: int
+        default: 9999
+        min: 0
+  - name: "resources"
+    label: "Resource"
+    folder: "content/reference/resources"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Link", name: "link", widget: "string"}
+  - name: professor
+    label: Professor
+    folder: "content/reference/professors"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - label: Position
+        name: position
+        widget: string
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Link", name: "link", widget: "string"}
+      - label: Courses Taught
+        name: courses
+        widget: list
+  - name: track
+    label: Track
+    folder: "content/reference/resources"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: string
+  - name: "contributors"
+    label: "Contributors"
+    folder: "content/contributors"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Graduating Year
+        name: year
+        widget: string
+        required: false
+      - label: Major
+        name: major
+        widget: string
+        required: false
