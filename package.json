@@ -7,8 +7,12 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "algoliasearch": "^4.2.0",
     "gridsome": "^0.7.0",
-    "netlify-cms": "^2.10.48"
+    "instantsearch.css": "^7.4.2",
+    "netlify-cms": "^2.10.49",
+    "tailwindcss-aspect-ratio": "^3.0.0",
+    "vue-instantsearch": "^2.7.0"
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
