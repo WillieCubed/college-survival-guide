@@ -1,0 +1,19 @@
+/* @font-face {
+  font-family: "Jost";
+  font-style: NORMAL_OR_ITALIC;
+  font-weight: NUMERIC_WEIGHT_VALUE;
+  src: url(FONT_FILE_NAME.woff2) format("woff2");
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Jost";
+    font-weight: 100 900;
+    src: url("../public/fonts/Jost-VariableFont_wght.ttf") format("woff2")
+      tech("variations");
+  }
+}
