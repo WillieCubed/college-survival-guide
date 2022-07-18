@@ -38,3 +38,14 @@ export type UISearchbarResults = {
 export type UISidebarContent = {
   chapters: UISidebarChapter[];
 };
+
+export type UIEntrySummary = {
+  slug: string;
+  title: string;
+  description: string;
+  thumbnailUrl?: string;
+};
+
+export type UIEntryIndex = {
+  entries: UIEntrySummary[];
+};

@@ -9,11 +9,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
-  @font-face {
+  /* TODO: Self-host fonts */
+  /* @font-face {
     font-family: "Jost";
     font-weight: 100 900;
     src: url("../public/fonts/Jost-VariableFont_wght.ttf") format("woff2")
       tech("variations");
+  } */
+
+  h1 {
+    @apply font-bold text-4xl;
+    @apply font-display;
+    @apply my-4;
+  }
+
+  h2 {
+    @apply font-semibold text-3xl;
+    @apply my-2;
   }
 }

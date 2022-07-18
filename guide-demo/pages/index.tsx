@@ -1,15 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { CombinedSearchBar } from "../components/search/SearchBar";
+import { CombinedSearchBar, useSearchBar } from "../components/search/SearchBar";
 
 function generateTagline(): string {
   return "Your handbook to the next four years.";
 }
 
 const Home: NextPage = () => {
+  const { handleSearch, handleInputUpdate, results, currentQuery } = useSearchBar();
   const tagline = generateTagline();
-
-  const handleSearchInputUpdate = (newInput: string) => {};
 
   return (
     <div className="dark:bg-slate-900 dark:text-white min-h-screen">
@@ -28,7 +27,7 @@ const Home: NextPage = () => {
           </div>
           <div className="mt-5 font-display text-2xl">{tagline}</div>
           <div className="py-4">
-            <CombinedSearchBar onInputUpdate={handleSearchInputUpdate} />
+            <CombinedSearchBar onInputUpdate={handleInputUpdate} onSearch={handleSearch} results={results} currentQuery={currentQuery} />
           </div>
         </section>
       </main>
